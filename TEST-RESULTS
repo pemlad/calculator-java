@@ -1,0 +1,31 @@
+Sistemsko testiranje funkcije kalkulatora (Black box):
+
+program obavlja uspesno osnovne matematicke operacije (sabiranje, oduzimanje, deljenje, mnozenje) kako celih tako i brojeva sa decimalom
+uspesno prepoznaje prioritete zagrada i prvo obavlja matematicke funkcije u njima, takodje ispravno vrsi redosled matematickih funkcija sa vise brojeva u nizu
+pri unosu teksta pokazuje da izraz nije prepoznat sto je ispravno
+
+Jedinicno testiranje:
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CalculatorTest {
+
+    public void testCalculate() {
+
+        String sabiranje = "30+20";
+        String rezultat = "50.0";
+        String dobijenirezultat = Calculator.Run(sabiranje);
+        AssertEquals(rezultat, dobijenirezultat);
+
+        if (rezultat() == dobijenirezultat()) {
+            loger.log("Rezultat: "+rezultat+" Dobijen rezultat: "+dobijenrezultat+" Testiranje=Tacno!");
+        }
+        else {
+            loger.log("Ocekivani rezultat: "+ocekivanirezultat+" Izracunat rezultat: "+izracunatrezultat+" Testiranje=Netacno!");
+        }
+    }
+  
+}
+
